@@ -1,0 +1,7 @@
+RewriteEngine On
+# desactiva el url rewriting para directorios existentes, archivos, o enlaces simbolicos.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+# indica que el punto de acceso a las url de la api es el archivo index.php
+RewriteRule . index.php [L]
